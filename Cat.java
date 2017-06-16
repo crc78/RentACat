@@ -13,6 +13,10 @@ public class Cat {
         this.rented = r;
     }
 
+    public boolean getRented(){
+        return this.rented;
+    }
+
     public String getName(){
         return this.name;
     }
@@ -26,16 +30,25 @@ public class Cat {
         return this.renter;
     }
 
-    public void returnCat(){
+    public int getPrice(){
+        return this.price;
+    }
 
+    public void returnCat(){
+        this.rented = false;
+        this.renter = "";
     }
 
     public boolean isRented(){
         return this.rented;
     }
 
-    public String toString(){
+    public String tooString(){
         return this.id + ". " + this.name + " $" + this.price;
+    }
+
+    public String returnedToString(){
+        return this.renter + " returned " + this.name + " and paid $" + this.price;
     }
 
 }
